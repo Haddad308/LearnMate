@@ -6,6 +6,7 @@ import lockIcon from "../../assets/Icons/Frame 14.svg";
 import userIcon from "../../assets/Icons/Frame 16.svg";
 
 const Login = () => {
+
     const formHandler = useFormik({
         initialValues: {
             email: '',
@@ -16,14 +17,13 @@ const Login = () => {
             password: Yup.string().required('مطلوب'),
         }),
         onSubmit: (values) => {
-            // Handle form submission here
             console.log(values);
         },
     });
 
     return (
         <form onSubmit={formHandler.handleSubmit} className="font-cairo flex flex-col justify-center items-end w-2/4" >
-            <h1 className="font-bold text-[26px] leading-10"  >مرحباً بعودتك!</h1>
+            <h1 className="font-bold text-[26px] leading-10"  >!مرحباً بعودتك</h1>
             <p className="font-normal text-[18px] leading-9 mb-4" >قم بتسجيل الدخول</p>
             <Input
                 status={(formHandler.touched.email && formHandler.errors.email) ? "error" : ""}

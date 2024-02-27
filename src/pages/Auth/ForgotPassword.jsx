@@ -5,7 +5,6 @@ import * as Yup from 'yup';
 
 const ForgotPassword = () => {
 
-
     const formHandler = useFormik({
         initialValues: {
             email: '',
@@ -14,11 +13,9 @@ const ForgotPassword = () => {
             email: Yup.string().email('عنوان البريد الإلكتروني غير صحيح').required('مطلوب'),
         }),
         onSubmit: (values) => {
-            // Handle form submission here
             console.log(values);
         },
     });
-
 
     return (
         <form onSubmit={formHandler.handleSubmit} className="font-cairo flex flex-col justify-center items-end w-2/4">
