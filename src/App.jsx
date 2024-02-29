@@ -28,7 +28,14 @@ const routers = createBrowserRouter([
 function App() {
   return (
     <ConfigProvider direction="rtl">
-      <RouterProvider router={routers} />
+      <RouterProvider router={routers} theme={{
+        components: {
+          ItemType: {
+            itemActiveBg: "#162fff",
+            colorText:"white"
+          },
+        },
+      }} />
     </ConfigProvider>
   )
 }
